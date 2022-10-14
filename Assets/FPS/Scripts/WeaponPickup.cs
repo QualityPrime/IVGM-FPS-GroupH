@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FPS.Scripts;
+using UnityEngine;
 
 [RequireComponent(typeof(Pickup))]
 public class WeaponPickup : MonoBehaviour

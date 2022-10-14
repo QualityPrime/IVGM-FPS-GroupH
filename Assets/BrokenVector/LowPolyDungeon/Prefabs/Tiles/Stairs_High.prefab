@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6404306957149010780}
   - component: {fileID: 6404306957147683708}
   - component: {fileID: 6404306957146585532}
-  - component: {fileID: 6404306957142477276}
+  - component: {fileID: 6254609168912545318}
   m_Layer: 0
   m_Name: Stairs_High
   m_TagString: Untagged
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6404306957142477276
+--- !u!64 &6254609168912545318
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,6 +96,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -7564673580991856557, guid: cae49dc2587049146a09ec771a13b0d8, type: 3}
+  m_Mesh: {fileID: -4366051453334466964, guid: ea5dfb0be4c6d9e459efd99e33cef012, type: 3}
