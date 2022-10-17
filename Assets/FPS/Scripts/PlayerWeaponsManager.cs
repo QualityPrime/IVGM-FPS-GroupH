@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -29,6 +30,12 @@ public class PlayerWeaponsManager : MonoBehaviour
     public Transform downWeaponPosition;
 
     [Header("Weapon Bob")]
+    [Tooltip("If the weapon will always bob")]
+    public bool alwaysBob = true;
+    [Tooltip("Frequency at which the weapon will move around in the screen when the player is not in movement")]
+    public float idleBobFrequency = 10f;
+    [Tooltip("How fast the weapon bob is applied, the bigger value the fastest")]
+    public float idleBobSharpness = 1f;
     [Tooltip("Frequency at which the weapon will move around in the screen when the player is in movement")]
     public float bobFrequency = 10f;
     [Tooltip("How fast the weapon bob is applied, the bigger value the fastest")]
@@ -70,6 +77,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     PlayerInputHandler m_InputHandler;
     PlayerCharacterController m_PlayerCharacterController;
     float m_WeaponBobFactor;
+    float m_DefaultWeaponBobFactor;
     Vector3 m_LastCharacterPosition;
     Vector3 m_WeaponMainLocalPosition;
     Vector3 m_WeaponBobLocalPosition;
@@ -287,13 +295,13 @@ public class PlayerWeaponsManager : MonoBehaviour
 
             // Calculate vertical and horizontal weapon bob values based on a sine function
             float bobAmount = isAiming ? aimingBobAmount : defaultBobAmount;
-            float frequency = bobFrequency;
-            float hBobValue = Mathf.Sin(Time.time * frequency) * bobAmount * m_WeaponBobFactor;
-            float vBobValue = ((Mathf.Sin(Time.time * frequency * 2f) * 0.5f) + 0.5f) * bobAmount * m_WeaponBobFactor;
+            float idleBob = alwaysBob ? Mathf.Sin(Time.time * idleBobFrequency) * idleBobSharpness/10f : 0;
+            float hBobValue = Mathf.Sin(Time.time * bobFrequency) * bobAmount * m_WeaponBobFactor;
+            float vBobValue = ((Mathf.Sin(Time.time * bobFrequency * 2f) * 0.5f) + 0.5f) * bobAmount * m_WeaponBobFactor;
 
             // Apply weapon bob
             m_WeaponBobLocalPosition.x = hBobValue;
-            m_WeaponBobLocalPosition.y = Mathf.Abs(vBobValue);
+            m_WeaponBobLocalPosition.y = idleBob + Mathf.Abs((vBobValue));
 
             m_LastCharacterPosition = m_PlayerCharacterController.transform.position;
         }
