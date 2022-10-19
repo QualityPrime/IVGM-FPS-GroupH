@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FPS.Scripts;
+using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {

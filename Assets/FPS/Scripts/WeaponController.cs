@@ -58,6 +58,10 @@ public class WeaponController : MonoBehaviour
     public float aimZoomRatio = 1f;
     [Tooltip("Translation to apply to weapon arm when aiming with this weapon")]
     public Vector3 aimOffset;
+    // [Tooltip("Rotation to apply to weapon arm when aiming with this weapon")]
+    // public Vector3 aimRotation;
+    // [Tooltip("Aim rotation applied to this game object")]
+    // public GameObject aimGameObject;
 
     [Header("Ammo Parameters")]
     [Tooltip("Amount of ammo reloaded per second")]
@@ -107,6 +111,7 @@ public class WeaponController : MonoBehaviour
     public GameObject owner { get; set; }
     public GameObject sourcePrefab { get; set; }
     public bool isCharging { get; private set; }
+    public bool isShooting { get; private set; }
     public float currentAmmoRatio { get; private set; }
     public bool isWeaponActive { get; private set; }
     public bool isCooling { get; private set; }
@@ -263,6 +268,7 @@ public class WeaponController : MonoBehaviour
                 return false;
 
             case WeaponShootType.Automatic:
+                isShooting = inputHeld;
                 if (inputHeld)
                 {
                     return TryShoot();
