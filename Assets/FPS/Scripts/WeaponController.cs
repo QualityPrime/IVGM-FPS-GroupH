@@ -58,6 +58,10 @@ public class WeaponController : MonoBehaviour
     public float aimZoomRatio = 1f;
     [Tooltip("Translation to apply to weapon arm when aiming with this weapon")]
     public Vector3 aimOffset;
+    // [Tooltip("Rotation to apply to weapon arm when aiming with this weapon")]
+    // public Vector3 aimRotation;
+    // [Tooltip("Aim rotation applied to this game object")]
+    // public GameObject aimGameObject;
 
     [Header("Ammo Parameters")]
     [Tooltip("Amount of ammo reloaded per second")]

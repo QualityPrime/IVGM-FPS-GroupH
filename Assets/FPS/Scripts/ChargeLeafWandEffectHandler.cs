@@ -109,19 +109,15 @@ public class ChargeLeafWandEffectHandler : MonoBehaviour
             m_GlowOrbParticle.gameObject.SetActive(m_WeaponController.isWeaponActive);
             m_GlowOrbParticle.Clear();
         }
-        //m_GlowOrbParticle.gameObject.SetActive(m_WeaponController.isWeaponActive);
-        //m_GlowOrbParticle.GetComponent<Light>().enabled = m_WeaponController.isWeaponActive;
-        // m_GlowOrbParticle.Clear();
-        // m_GlowOrbParticle.Stop();
+        
         m_ChargeRatio = m_WeaponController.currentCharge;
         
-        
-        chargingObject.transform.Rotate(rotateSpeed, rotateSpeed * Time.deltaTime, rotateSpeed);
+        chargingObject.transform.Rotate(0, 0, rotateSpeed * m_ChargeRatio); //chargingObject.transform.eulerAngles.z
         chargingObject.transform.localScale = scale.GetValueFromRatio(m_ChargeRatio);
 
         m_VelocityOverTimeModule.orbitalY = orbitY.GetValueFromRatio(m_ChargeRatio);
-        m_DiskOrbitParticle.transform.localScale = radius.GetValueFromRatio(m_ChargeRatio * 1.1f);
-        m_GlowOrbParticle.transform.localScale = radius.GetValueFromRatio(m_ChargeRatio * 1.1f);
+        m_DiskOrbitParticle.transform.localScale = radius.GetValueFromRatio(m_ChargeRatio * 1.0f);
+        m_GlowOrbParticle.transform.localScale = radius.GetValueFromRatio(m_ChargeRatio * 1.8f);
 
         // update sound's volume and pitch 
         if (m_ChargeRatio > 0)

@@ -267,11 +267,13 @@ public class PlayerWeaponsManager : MonoBehaviour
             WeaponController activeWeapon = GetActiveWeapon();
             if (isAiming && activeWeapon)
             {
+                // activeWeapon.aimGameObject.transform.localEulerAngles = Vector3.Lerp(activeWeapon.aimGameObject.transform.localEulerAngles, activeWeapon.aimRotation, aimingAnimationSpeed * Time.deltaTime);
                 m_WeaponMainLocalPosition = Vector3.Lerp(m_WeaponMainLocalPosition, aimingWeaponPosition.localPosition + activeWeapon.aimOffset, aimingAnimationSpeed * Time.deltaTime);
                 SetFOV(Mathf.Lerp(m_PlayerCharacterController.playerCamera.fieldOfView, activeWeapon.aimZoomRatio * defaultFOV, aimingAnimationSpeed * Time.deltaTime));
             }
             else
             {
+                // activeWeapon.aimGameObject.transform.localEulerAngles = Vector3.Lerp(activeWeapon.aimGameObject.transform.localEulerAngles, Vector3.zero, aimingAnimationSpeed * Time.deltaTime);
                 m_WeaponMainLocalPosition = Vector3.Lerp(m_WeaponMainLocalPosition, defaultWeaponPosition.localPosition, aimingAnimationSpeed * Time.deltaTime);
                 SetFOV(Mathf.Lerp(m_PlayerCharacterController.playerCamera.fieldOfView, defaultFOV, aimingAnimationSpeed * Time.deltaTime));
             }

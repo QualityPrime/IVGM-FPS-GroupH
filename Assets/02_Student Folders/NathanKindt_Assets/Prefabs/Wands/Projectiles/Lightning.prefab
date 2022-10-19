@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 3659995153115176983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8402172112652589804}
   m_Father: {fileID: 0}
@@ -62,7 +62,7 @@ MonoBehaviour:
   root: {fileID: 3659995153115176982}
   tip: {fileID: 1135791333161367127}
   maxLifeTime: 1
-  impactVFX: {fileID: 7655095426451682942, guid: 358eca6adc32a89459c54b6b62d9c825,
+  impactVFX: {fileID: 7655095426451682942, guid: 10963cdfee3464f42a4decd5e132275c,
     type: 3}
   impactVFXLifetime: 5
   impactVFXSpawnOffset: 0.1
@@ -72,13 +72,19 @@ MonoBehaviour:
     m_Bits: 4294967295
   speed: 500
   gravityDownAcceleration: 0
-  trajectoryCorrectionDistance: -1
+  trajectoryCorrectionDistance: 0
   inheritWeaponVelocity: 0
   bobFrequency: 0
   bobAmount: 0
+  doBobbing: 0
   doRotation: 0
+  rotationSpeed: 0
   damage: 2
+  damageRange:
+    min: 0
+    max: 0
   areaOfDamage: {fileID: 0}
+  doScaling: 0
   radiusColor: {r: 0, g: 1, b: 1, a: 1}
 --- !u!1 &5564024855854763701
 GameObject:

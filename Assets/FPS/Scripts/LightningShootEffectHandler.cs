@@ -8,6 +8,8 @@ public class LightningShootEffectHandler : MonoBehaviour
     public GameObject glowOrbParticlePrefab;
     [Tooltip("Parent transform for the particles (Optional)")]
     public Transform parentTransform;
+    [Tooltip("lightning")]
+    public GameObject lightningPrefab;
     
     public GameObject lightningInstance { get; set; }
     
@@ -21,6 +23,8 @@ public class LightningShootEffectHandler : MonoBehaviour
 
     void Update()
     {
+        lightningPrefab.SetActive(m_WeaponController.isShooting);
+        
         if (m_WeaponController.isShooting && lightningInstance == null)
         {
             lightningInstance = Instantiate(glowOrbParticlePrefab, parentTransform);
