@@ -33,37 +33,6 @@ Transform:
   m_Father: {fileID: 825220459589154871}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 57.609, y: -37.278, z: -6.328}
---- !u!1 &792463331220947062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 792463331221196092}
-  m_Layer: 0
-  m_Name: orb
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &792463331221196092
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792463331220947062}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8334323006752503713}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1505447205160222267
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,19 +127,19 @@ MonoBehaviour:
   shootType: 2
   projectilePrefab: {fileID: 528546716365072993, guid: cb2b941008d13114e8e9c34a96e73877,
     type: 3}
-  delayBetweenShots: 0.8
-  bulletSpreadAngle: 18
+  delayBetweenShots: 0.4
+  bulletSpreadAngle: 15
   bulletsPerShot: 64
-  recoilForce: 0
+  recoilForce: 0.1
   aimZoomRatio: 0.8
   aimOffset: {x: 0.2, y: 0, z: 0}
-  ammoReloadRate: 16
-  ammoReloadDelay: 0
-  maxAmmo: 256
+  ammoReloadRate: 999
+  ammoReloadDelay: 0.8
+  maxAmmo: 3
   automaticReleaseOnCharged: 0
-  maxChargeDuration: 1.5
-  ammoUsedOnStartCharge: 4
-  ammoUsageRateWhileCharging: 60
+  maxChargeDuration: 2
+  ammoUsedOnStartCharge: 0.5
+  ammoUsageRateWhileCharging: 2.5
   weaponAnimator: {fileID: 0}
   muzzleFlashPrefab: {fileID: 748781637555137343, guid: 9f671b22f25370048a18fb1f821294ec,
     type: 3}
@@ -193,11 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131d13a0e9a04d0f8942f9a15ba7d899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargingObject: {fileID: 792463331220947062}
-  scale:
-    min: {x: 0, y: 0, z: 0}
-    max: {x: 1, y: 1, z: 1}
-  rotateSpeed: 3
   diskOrbitParticlePrefab: {fileID: 943548049040909027, guid: 3f3988b7a8f59034cb80577f2693a7ce,
     type: 3}
   glowOrbParticlePrefab: {fileID: 943548049040909027, guid: b56125a578231ca498fe16deca9b4fde,
@@ -210,9 +174,6 @@ MonoBehaviour:
   radius:
     min: {x: 0, y: 0, z: 0}
     max: {x: 0.1, y: 0.1, z: 0.1}
-  spinningSpeed:
-    min: 0
-    max: 0
   chargeSound: {fileID: 8300000, guid: fa5dadf2299c0064f931a5004770f2a4, type: 3}
   loopChargeWeaponSFX: {fileID: 8300000, guid: fa5dadf2299c0064f931a5004770f2a4, type: 3}
   fadeLoopDuration: 1
@@ -340,8 +301,7 @@ Transform:
   m_LocalPosition: {x: -0.006639816, y: 0.39623135, z: -0.005988568}
   m_LocalScale: {x: 0.50000006, y: 0.5, z: 0.50000006}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 792463331221196092}
+  m_Children: []
   m_Father: {fileID: 7067572467123841625}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
