@@ -284,16 +284,16 @@ MonoBehaviour:
   delayBetweenShots: 0.05
   bulletSpreadAngle: 2
   bulletsPerShot: 1
-  recoilForce: 0.5
+  recoilForce: 0.3
   aimZoomRatio: 0.8
   aimOffset: {x: 0.2, y: 0, z: 0}
-  ammoReloadRate: 16
-  ammoReloadDelay: 0.2
-  maxAmmo: 400
+  ammoReloadRate: 666
+  ammoReloadDelay: 0
+  maxAmmo: 666
   automaticReleaseOnCharged: 0
-  maxChargeDuration: 3
-  ammoUsedOnStartCharge: 4
-  ammoUsageRateWhileCharging: 60
+  maxChargeDuration: 0
+  ammoUsedOnStartCharge: 0
+  ammoUsageRateWhileCharging: 0
   weaponAnimator: {fileID: 0}
   muzzleFlashPrefab: {fileID: 0}
   unparentMuzzleFlash: 0
