@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 320366457750320503}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1134305219075343549}
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc7a1b9872e81d4cb036cea558d00af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bobFrequency: 3
-  bobAmplitude: 0.3
+  bobFrequency: 1
+  bobAmplitude: 0.5
   flickerLight: {fileID: 8518786810994185309}
   flickerFrequency: 1
   flickerAmplitude: 1
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 1614318205656627459}
   - component: {fileID: 5157706288853011051}
   m_Layer: 0
-  m_Name: Enemy_RedWhisp
+  m_Name: Enemy_Wisp_Red
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27364eefd6dd0341ba72a3bfc0d9727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 250
   criticalHealthRatio: 0.3
 --- !u!114 &3464315327790461765
 MonoBehaviour:
@@ -248,11 +248,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 3
+  m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.2
+  m_StoppingDistance: 6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -483,9 +483,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionSourcePoint: {fileID: 6571005840976436832}
-  detectionRange: 20
-  attackRange: 10
-  knownTargetTimeout: 12
+  detectionRange: 60
+  attackRange: 50
+  knownTargetTimeout: 5
   animator: {fileID: 0}
 --- !u!1 &6421371450313891992
 GameObject:
@@ -940,15 +940,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9200139261743394960}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 592879080836569680}
+  - {fileID: 1119045151917116601}
   m_Father: {fileID: 320366457750808919}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &636318252507141470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1121,7 +1121,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1134305219075481149}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6092871354977219126
+--- !u!1001 &5995359793767998687
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1131,7 +1131,7 @@ PrefabInstance:
     - target: {fileID: 6680085459849701477, guid: 55d1f990fdc2e7e4594bc013993dffa4,
         type: 3}
       propertyPath: m_Name
-      value: Weapon_wishbolt
+      value: Weapon_Wisp_Red
       objectReference: {fileID: 0}
     - target: {fileID: 6680085459849701478, guid: 55d1f990fdc2e7e4594bc013993dffa4,
         type: 3}
@@ -1151,27 +1151,27 @@ PrefabInstance:
     - target: {fileID: 6680085459849701478, guid: 55d1f990fdc2e7e4594bc013993dffa4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6680085459849701478, guid: 55d1f990fdc2e7e4594bc013993dffa4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6680085459849701478, guid: 55d1f990fdc2e7e4594bc013993dffa4,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680085459849701478, guid: 55d1f990fdc2e7e4594bc013993dffa4,
+        type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6680085459849701478, guid: 55d1f990fdc2e7e4594bc013993dffa4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6680085459849701478, guid: 55d1f990fdc2e7e4594bc013993dffa4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6680085459849701478, guid: 55d1f990fdc2e7e4594bc013993dffa4,
         type: 3}
@@ -1190,11 +1190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d1f990fdc2e7e4594bc013993dffa4, type: 3}
---- !u!4 &592879080836569680 stripped
+--- !u!4 &1119045151917116601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6680085459849701478, guid: 55d1f990fdc2e7e4594bc013993dffa4,
     type: 3}
-  m_PrefabInstance: {fileID: 6092871354977219126}
+  m_PrefabInstance: {fileID: 5995359793767998687}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7329187935062197287
 PrefabInstance:

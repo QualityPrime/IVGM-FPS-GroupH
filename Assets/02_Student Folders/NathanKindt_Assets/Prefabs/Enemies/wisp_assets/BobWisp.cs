@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-public class BobWhisp : MonoBehaviour
+public class BobWisp : MonoBehaviour
 {
     [Tooltip("Frequency at which the weapon will move around in the screen when the player is not in movement")]
     public float bobFrequency = 1f;
