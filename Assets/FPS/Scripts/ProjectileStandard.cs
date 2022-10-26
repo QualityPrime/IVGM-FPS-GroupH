@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(ProjectileBase))]
 public class ProjectileStandard : MonoBehaviour
@@ -33,12 +35,26 @@ public class ProjectileStandard : MonoBehaviour
     public float trajectoryCorrectionDistance = -1;
     [Tooltip("Determines if the projectile inherits the velocity that the weapon's muzzle had when firing")]
     public bool inheritWeaponVelocity = false;
-
+    [Tooltip("Frequency at which the item will move up and down")]
+    public float bobFrequency = 0f;
+    [Tooltip("Distance the item will move up and down")]
+    public float bobAmount = 0f;
+    [Tooltip("do Bobbing")]
+    public bool doBobbing = false;
+    [Tooltip("do Rotation")]
+    public bool doRotation = false;
+    [Tooltip("Rotation speed")]
+    public float rotationSpeed = 0f;
+    
     [Header("Damage")]
     [Tooltip("Damage of the projectile")]
-    public float damage = 40f;
-    [Tooltip("Area of damage. Keep empty if you don<t want area damage")]
+    public float damage;
+    [Tooltip("Damage of the projectile, leave 0 if using flat damage")]
+    public MinMaxFloat damageRange;
+    [Tooltip("Area of damage. Keep empty if you don't want area damage")]
     public DamageArea areaOfDamage;
+    [Tooltip("scale projectile based on damage")]
+    public bool doScaling = false;
 
     [Header("Debug")]
     [Tooltip("Color of the projectile radius debug view")]
@@ -47,11 +63,13 @@ public class ProjectileStandard : MonoBehaviour
     ProjectileBase m_ProjectileBase;
     Vector3 m_LastRootPosition;
     Vector3 m_Velocity;
+    private Vector3 bobDirection;
     bool m_HasTrajectoryOverride;
     float m_ShootTime;
     Vector3 m_TrajectoryCorrectionVector;
     Vector3 m_ConsumedTrajectoryCorrectionVector;
     List<Collider> m_IgnoredColliders;
+    protected internal float VFXscale = 1f;
 
     const QueryTriggerInteraction k_TriggerInteraction = QueryTriggerInteraction.Collide;
 
@@ -62,6 +80,15 @@ public class ProjectileStandard : MonoBehaviour
 
         m_ProjectileBase.onShoot += OnShoot;
 
+        if (damageRange.max > 0)
+        {
+            damage = Random.Range(damageRange.min, damageRange.max);
+        }
+        if (doBobbing)
+        {
+            bobDirection = Random.insideUnitSphere;
+        }
+        
         Destroy(gameObject, maxLifeTime);
     }
 
@@ -71,7 +98,17 @@ public class ProjectileStandard : MonoBehaviour
         m_LastRootPosition = root.position;
         m_Velocity = transform.forward * speed;
         m_IgnoredColliders = new List<Collider>();
-        transform.position += m_ProjectileBase.inheritedMuzzleVelocity * Time.deltaTime;
+        if (doScaling)
+        {
+            transform.position += m_ProjectileBase.inheritedMuzzleVelocity * Time.deltaTime;
+            var scale = (-0.5f + ((damage - damageRange.min) / damageRange.max)) * 3f;
+            transform.localScale += new Vector3(scale, scale, scale);
+        }
+
+        if (doRotation)
+        {
+            transform.rotation = Quaternion.FromToRotation(Vector3.up, transform.forward) * Random.rotation;
+        }
 
         // Ignore colliders of owner
         Collider[] ownerColliders = m_ProjectileBase.owner.GetComponentsInChildren<Collider>();
@@ -103,13 +140,24 @@ public class ProjectileStandard : MonoBehaviour
                     OnHit(hit.point, hit.normal, hit.collider);
                 }
             }
+
         }
+    }
+
+    public void UpdateVelocity()
+    {
+        m_Velocity = transform.forward * speed;
     }
 
     void Update()
     {
         // Move
-        transform.position += m_Velocity * Time.deltaTime;
+        transform.position += bobDirection * (Mathf.Sin(Time.time * bobFrequency) * bobAmount/100f) + m_Velocity * Time.deltaTime;
+        if (doRotation)
+        {
+            transform.Rotate (Vector3.right * (rotationSpeed * Time.deltaTime));
+        }
+        
         if (inheritWeaponVelocity)
         {
             transform.position += m_ProjectileBase.inheritedMuzzleVelocity * Time.deltaTime;
@@ -135,13 +183,16 @@ public class ProjectileStandard : MonoBehaviour
         }
 
         // Orient towards velocity
-        transform.forward = m_Velocity.normalized;
+        if (!doRotation)
+        {
+            transform.forward = m_Velocity.normalized;
+        }
 
         // Gravity
         if (gravityDownAcceleration > 0)
         {
             // add gravity to the projectile velocity for ballistic effect
-            m_Velocity += Vector3.down * gravityDownAcceleration * Time.deltaTime;
+            m_Velocity += Vector3.down * (gravityDownAcceleration * Time.deltaTime);
         }
 
         // Hit detection
@@ -223,6 +274,7 @@ public class ProjectileStandard : MonoBehaviour
         if (impactVFX)
         {
             GameObject impactVFXInstance = Instantiate(impactVFX, point + (normal * impactVFXSpawnOffset), Quaternion.LookRotation(normal));
+            impactVFXInstance.transform.localScale *= VFXscale;
             if (impactVFXLifetime > 0)
             {
                 Destroy(impactVFXInstance.gameObject, impactVFXLifetime);

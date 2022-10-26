@@ -125,3 +125,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 .idea/
+
+#!/[Aa]ssets/**/*.meta
+# too Large
+**/LightingData.*
