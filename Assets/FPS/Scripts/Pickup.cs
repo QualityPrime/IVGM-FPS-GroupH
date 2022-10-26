@@ -59,6 +59,7 @@ namespace FPS.Scripts
                 if (onPick != null)
                 {
                     onPick.Invoke(pickingPlayer);
+                    PlayPickupFeedback();
                 }
             }
         }

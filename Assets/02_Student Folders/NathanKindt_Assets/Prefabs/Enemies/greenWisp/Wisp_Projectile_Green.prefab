@@ -74,8 +74,8 @@ MonoBehaviour:
   gravityDownAcceleration: 0
   trajectoryCorrectionDistance: 0
   inheritWeaponVelocity: 0
-  bobFrequency: 1
-  bobAmount: 0.1
+  bobFrequency: 5
+  bobAmount: 5
   doBobbing: 1
   doRotation: 0
   rotationSpeed: 0

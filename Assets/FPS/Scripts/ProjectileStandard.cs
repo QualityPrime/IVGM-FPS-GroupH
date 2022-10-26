@@ -101,7 +101,7 @@ public class ProjectileStandard : MonoBehaviour
         if (doScaling)
         {
             transform.position += m_ProjectileBase.inheritedMuzzleVelocity * Time.deltaTime;
-            var scale = (-0.5f + ((damage - damageRange.min) / damageRange.max)) * 2f;
+            var scale = (-0.5f + ((damage - damageRange.min) / damageRange.max)) * 3f;
             transform.localScale += new Vector3(scale, scale, scale);
         }
 
@@ -152,7 +152,7 @@ public class ProjectileStandard : MonoBehaviour
     void Update()
     {
         // Move
-        transform.position += bobDirection * (Mathf.Sin(Time.time * bobFrequency) * bobAmount/1000f) + m_Velocity * Time.deltaTime;
+        transform.position += bobDirection * (Mathf.Sin(Time.time * bobFrequency) * bobAmount/100f) + m_Velocity * Time.deltaTime;
         if (doRotation)
         {
             transform.Rotate (Vector3.right * (rotationSpeed * Time.deltaTime));
