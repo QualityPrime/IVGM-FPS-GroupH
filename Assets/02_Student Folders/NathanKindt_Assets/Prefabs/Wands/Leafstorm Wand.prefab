@@ -127,19 +127,19 @@ MonoBehaviour:
   shootType: 2
   projectilePrefab: {fileID: 528546716365072993, guid: cb2b941008d13114e8e9c34a96e73877,
     type: 3}
-  delayBetweenShots: 0.4
-  bulletSpreadAngle: 15
-  bulletsPerShot: 64
+  delayBetweenShots: 0.1
+  bulletSpreadAngle: 23
+  bulletsPerShot: 57
   recoilForce: 0.1
   aimZoomRatio: 0.8
   aimOffset: {x: 0.2, y: 0, z: 0}
-  ammoReloadRate: 999
-  ammoReloadDelay: 0.8
+  ammoReloadRate: 9999
+  ammoReloadDelay: 0.4
   maxAmmo: 3
   automaticReleaseOnCharged: 0
-  maxChargeDuration: 2
-  ammoUsedOnStartCharge: 0.5
-  ammoUsageRateWhileCharging: 2.5
+  maxChargeDuration: 1.6
+  ammoUsedOnStartCharge: 1.5
+  ammoUsageRateWhileCharging: 1.5
   weaponAnimator: {fileID: 0}
   muzzleFlashPrefab: {fileID: 748781637555137343, guid: 9f671b22f25370048a18fb1f821294ec,
     type: 3}

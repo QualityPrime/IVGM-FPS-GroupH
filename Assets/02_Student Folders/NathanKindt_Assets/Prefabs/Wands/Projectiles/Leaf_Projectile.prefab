@@ -58,10 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de99b30e1e73fd14e98cc5371da25d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.1
+  radius: 0.4
   root: {fileID: 3659995153115176982}
   tip: {fileID: 1135791333161367127}
-  maxLifeTime: 5
+  maxLifeTime: 2
   impactVFX: {fileID: 7655095426451682942, guid: a7d68b1a502e02a49b8efb1b86a8c931,
     type: 3}
   impactVFXLifetime: 5
@@ -70,19 +70,19 @@ MonoBehaviour:
   hittableLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  speed: 16
+  speed: 15
   gravityDownAcceleration: 0
   trajectoryCorrectionDistance: 0
   inheritWeaponVelocity: 0
-  bobFrequency: 4
-  bobAmount: 10
+  bobFrequency: 5
+  bobAmount: 5
   doBobbing: 1
   doRotation: 1
   rotationSpeed: 360
   damage: 3
   damageRange:
     min: 3
-    max: 17
+    max: 9
   areaOfDamage: {fileID: 0}
   doScaling: 1
   radiusColor: {r: 0, g: 1, b: 1, a: 1}
