@@ -123,18 +123,18 @@ MonoBehaviour:
     crosshairColor: {r: 0, g: 0.8156863, b: 1, a: 1}
   weaponRoot: {fileID: 1505447205160222267}
   weaponMuzzle: {fileID: 8334323006752503713}
-  shootType: 1
+  shootType: 0
   projectilePrefab: {fileID: 528546716365072993, guid: 399fc380a202cad4fa30f68bc13e6036,
     type: 3}
-  delayBetweenShots: 0.1
+  delayBetweenShots: 1.6
   bulletSpreadAngle: 0
   bulletsPerShot: 1
-  recoilForce: 1
+  recoilForce: 2
   aimZoomRatio: 0.8
   aimOffset: {x: 0.2, y: 0, z: 0}
-  ammoReloadRate: 9999
-  ammoReloadDelay: 0.5
-  maxAmmo: 3
+  ammoReloadRate: 1
+  ammoReloadDelay: 1
+  maxAmmo: 1
   automaticReleaseOnCharged: 0
   maxChargeDuration: 0
   ammoUsedOnStartCharge: 0
@@ -143,8 +143,8 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 748781637555137343, guid: f3fe964613945244397abf9ea51d20c7,
     type: 3}
   unparentMuzzleFlash: 0
-  shootSFX: {fileID: 8300000, guid: f66745b6cbf8fd2408cd164df872b392, type: 3}
-  changeWeaponSFX: {fileID: 8300000, guid: 48de6b7092c8aab45ae542cbb3ac8ba4, type: 3}
+  shootSFX: {fileID: 8300000, guid: 13fbc4e0b2c448d49b694492b1879795, type: 3}
+  changeWeaponSFX: {fileID: 0}
   useContinuousShootSound: 0
   continuousShootStartSFX: {fileID: 0}
   continuousShootLoopSFX: {fileID: 0}

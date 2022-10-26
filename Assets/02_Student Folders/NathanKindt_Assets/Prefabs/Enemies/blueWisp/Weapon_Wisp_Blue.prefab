@@ -127,15 +127,15 @@ MonoBehaviour:
     type: 3}
   delayBetweenShots: 0.1
   bulletSpreadAngle: 15
-  bulletsPerShot: 7
+  bulletsPerShot: 9
   recoilForce: 0
   aimZoomRatio: 1
   aimOffset: {x: 0, y: 0, z: 0}
-  ammoReloadRate: 0.5
+  ammoReloadRate: 0.7
   ammoReloadDelay: 0.5
   maxAmmo: 100
   automaticReleaseOnCharged: 1
-  maxChargeDuration: 1.5
+  maxChargeDuration: 1
   ammoUsedOnStartCharge: 0
   ammoUsageRateWhileCharging: 1
   weaponAnimator: {fileID: 0}
