@@ -855,8 +855,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 0.5
+  m_Intensity: 3
+  m_Range: 0.9
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -916,7 +916,7 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 4278198271
-  m_Size: 0.5
+  m_Size: 0.8
 --- !u!1 &9200139261743394960
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,17 +969,17 @@ PrefabInstance:
     - target: {fileID: 4709155797089196501, guid: aa9f5c44f6bae8049bbef61da6050dc2,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4709155797089196501, guid: aa9f5c44f6bae8049bbef61da6050dc2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4709155797089196501, guid: aa9f5c44f6bae8049bbef61da6050dc2,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4709155797089196501, guid: aa9f5c44f6bae8049bbef61da6050dc2,
         type: 3}
@@ -1035,6 +1035,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.89411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.102089725
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time
+      value: 0.0032463074
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0.3672638
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].value
+      value: 0.3495636
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
+      value: 0.67516917
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0.67516917
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: aa9f5c44f6bae8049bbef61da6050dc2,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa9f5c44f6bae8049bbef61da6050dc2, type: 3}
