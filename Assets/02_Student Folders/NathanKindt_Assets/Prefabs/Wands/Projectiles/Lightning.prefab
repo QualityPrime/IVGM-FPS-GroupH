@@ -79,7 +79,7 @@ MonoBehaviour:
   doBobbing: 0
   doRotation: 0
   rotationSpeed: 0
-  damage: 2
+  damage: 3
   damageRange:
     min: 0
     max: 0
