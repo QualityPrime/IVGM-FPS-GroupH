@@ -33,9 +33,9 @@ public class PlayerWeaponsManager : MonoBehaviour
     [Tooltip("If the weapon will always bob")]
     public bool alwaysBob = true;
     [Tooltip("Frequency at which the weapon will move around in the screen when the player is not in movement")]
-    public float idleBobFrequency = 10f;
+    public float idleBobFrequency = 1f;
     [Tooltip("How fast the weapon bob is applied, the bigger value the fastest")]
-    public float idleBobSharpness = 1f;
+    public float idleBobSharpness = 0.5f;
     [Tooltip("Frequency at which the weapon will move around in the screen when the player is in movement")]
     public float bobFrequency = 10f;
     [Tooltip("How fast the weapon bob is applied, the bigger value the fastest")]
