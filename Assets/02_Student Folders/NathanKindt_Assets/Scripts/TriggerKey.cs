@@ -13,6 +13,8 @@ public class TriggerKey : MonoBehaviour
 
         [Tooltip("Clip to play on impact")]
         public GameObject aThing;
+        [Tooltip("Clip to play on impact")]
+        public GameObject aSecondThing;
 
         [Tooltip("Sound played on pickup")]
         public AudioClip pickupSFX;
@@ -68,6 +70,7 @@ public class TriggerKey : MonoBehaviour
                 }
                 
                 aThing.transform.localPosition += Vector3.up * 4;
+                aSecondThing.transform.localPosition += Vector3.up * 4;
             }
         }
         
