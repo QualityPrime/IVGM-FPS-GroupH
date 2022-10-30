@@ -82,8 +82,8 @@ MonoBehaviour:
   rotationSpeed: 360
   damage: 3
   damageRange:
-    min: 3
-    max: 9
+    min: 5
+    max: 15
   areaOfDamage: {fileID: 0}
   doScaling: 1
   radiusColor: {r: 0, g: 1, b: 1, a: 1}

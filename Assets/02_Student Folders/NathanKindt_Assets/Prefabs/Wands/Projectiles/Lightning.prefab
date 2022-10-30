@@ -61,7 +61,7 @@ MonoBehaviour:
   radius: 0.1
   root: {fileID: 3659995153115176982}
   tip: {fileID: 1135791333161367127}
-  maxLifeTime: 0.3
+  maxLifeTime: 0.2
   impactVFX: {fileID: 7655095426451682942, guid: 10963cdfee3464f42a4decd5e132275c,
     type: 3}
   impactVFXLifetime: 5
@@ -79,7 +79,7 @@ MonoBehaviour:
   doBobbing: 0
   doRotation: 0
   rotationSpeed: 0
-  damage: 3
+  damage: 2
   damageRange:
     min: 0
     max: 0

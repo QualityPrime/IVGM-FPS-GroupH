@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 9087309521236736242}
   - component: {fileID: 3604286649555344119}
   - component: {fileID: 8864261041272861440}
-  - component: {fileID: 1198233910419008148}
-  - component: {fileID: 206548830377941000}
   - component: {fileID: 1521603250963777822}
   - component: {fileID: 7817576621986282824}
   m_Layer: 0
@@ -125,34 +123,6 @@ MonoBehaviour:
   rotatingSpeed: 90
   pickupSFX: {fileID: 8300000, guid: 4101d1edf38060e4bbedf50cb21fce71, type: 3}
   pickupVFXPrefab: {fileID: 0}
---- !u!114 &1198233910419008148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5936766926577821228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7535462baa2ed0d469f708cbe145b720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Steal The Kings Favorite Food
-  description: He must have a key to the gate hidden somewhere?
-  isOptional: 1
-  delayVisible: 0
---- !u!114 &206548830377941000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5936766926577821228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33498356859fc2040b30fc2e60beac7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &1521603250963777822
 SphereCollider:
   m_ObjectHideFlags: 0

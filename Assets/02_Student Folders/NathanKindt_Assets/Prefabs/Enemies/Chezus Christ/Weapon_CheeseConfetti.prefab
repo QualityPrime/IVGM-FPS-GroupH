@@ -125,7 +125,7 @@ MonoBehaviour:
   shootType: 2
   projectilePrefab: {fileID: 528546716365072993, guid: fa8501899bd542a49978824824d064c8,
     type: 3}
-  delayBetweenShots: 0.3
+  delayBetweenShots: 0
   bulletSpreadAngle: 42
   bulletsPerShot: 200
   recoilForce: 0

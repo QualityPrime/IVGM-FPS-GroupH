@@ -1291,6 +1291,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Wisp_Blue Guard1
       objectReference: {fileID: 0}
+    - target: {fileID: 2015434656898269652, guid: 50a272ab0cfaafd46a46be3c7faac209,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2015434656898269656, guid: 50a272ab0cfaafd46a46be3c7faac209,
         type: 3}
       propertyPath: m_RootOrder
@@ -2414,6 +2419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_Wisp_Blue Guard 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015434656898269652, guid: 50a272ab0cfaafd46a46be3c7faac209,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2015434656898269656, guid: 50a272ab0cfaafd46a46be3c7faac209,
         type: 3}

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using FPS.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -71,7 +72,11 @@ public class EnemyController : MonoBehaviour
     [Tooltip("The chance the object has to drop")]
     [Range(0, 1)]
     public float dropRate = 1f;
-
+    [Tooltip("The object this enemy translates up")]
+    public GameObject cheese;
+    [Tooltip("should translate cheese")]
+    public bool doCheeseDrop;
+    
     [Header("Debug Display")]
     [Tooltip("Color of the sphere gizmo representing the path reaching range")]
     public Color pathReachingRangeColor = Color.yellow;
@@ -361,6 +366,12 @@ public class EnemyController : MonoBehaviour
         if (TryDropItem())
         {
             Instantiate(lootPrefab, transform.position, Quaternion.identity);
+        }
+
+        if (doCheeseDrop)
+        {
+            var m_Pickup = cheese.GetComponent<Pickup>();
+            m_Pickup.m_StartPosition = new Vector3(7, -6, 16);
         }
 
         // this will call the OnDestroy function
