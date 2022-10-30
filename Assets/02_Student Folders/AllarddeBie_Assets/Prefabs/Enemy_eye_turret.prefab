@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27364eefd6dd0341ba72a3bfc0d9727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 400
   criticalHealthRatio: 0.3
 --- !u!114 &3464315327790461765
 MonoBehaviour:
@@ -892,7 +892,7 @@ MonoBehaviour:
   weaponRoot: {fileID: 8815063736924141185}
   weaponMuzzle: {fileID: 2096565386399891227}
   shootType: 1
-  projectilePrefab: {fileID: 528546716365072993, guid: 154bfb4989fe16d439e8f3fb7c20b72b,
+  projectilePrefab: {fileID: 528546716365072993, guid: 64b937216100e4d4da1598eb4c35a3bc,
     type: 3}
   delayBetweenShots: 0.06
   bulletSpreadAngle: 0
@@ -910,7 +910,7 @@ MonoBehaviour:
   weaponAnimator: {fileID: 0}
   muzzleFlashPrefab: {fileID: 638502610521960261}
   unparentMuzzleFlash: 0
-  shootSFX: {fileID: 8300000, guid: 397c801b6e2932c45a1980d2843cd2ed, type: 3}
+  shootSFX: {fileID: 8300000, guid: 55310df3555d41e41bf341a0d64ebde7, type: 3}
   changeWeaponSFX: {fileID: 0}
   useContinuousShootSound: 0
   continuousShootStartSFX: {fileID: 0}
@@ -1396,6 +1396,11 @@ PrefabInstance:
         type: 3}
       propertyPath: scalingMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951582856014658560, guid: 3f5b545b9a1e74c418b061bba5bb9e2c,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f5b545b9a1e74c418b061bba5bb9e2c, type: 3}
