@@ -4233,7 +4233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3152905515576607513}
   m_Layer: 0
-  m_Name: Arena
+  m_Name: Throne Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

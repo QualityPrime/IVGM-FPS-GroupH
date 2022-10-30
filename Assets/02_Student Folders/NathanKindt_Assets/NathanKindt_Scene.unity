@@ -1956,7 +1956,7 @@ PrefabInstance:
     - target: {fileID: 320366457750808919, guid: 84ec5d9d83ce0564fa6cbdbd29ae77ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.8
+      value: 4.52
       objectReference: {fileID: 0}
     - target: {fileID: 2015434656898269652, guid: 84ec5d9d83ce0564fa6cbdbd29ae77ba,
         type: 3}
@@ -3302,7 +3302,7 @@ PrefabInstance:
     - target: {fileID: 2620131183356007199, guid: 485d6efd1f58c7c41af14ed281459984,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2620131183356007199, guid: 485d6efd1f58c7c41af14ed281459984,
         type: 3}
@@ -7167,6 +7167,11 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7963808146068276655, guid: 240c620a5dee3414183044faa6fbaf08,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.986
+      objectReference: {fileID: 0}
     - target: {fileID: 7972887100083177555, guid: 240c620a5dee3414183044faa6fbaf08,
         type: 3}
       propertyPath: m_Convex
@@ -9166,7 +9171,7 @@ PrefabInstance:
     - target: {fileID: 2620131183356007199, guid: 485d6efd1f58c7c41af14ed281459984,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2620131183356007199, guid: 485d6efd1f58c7c41af14ed281459984,
         type: 3}
