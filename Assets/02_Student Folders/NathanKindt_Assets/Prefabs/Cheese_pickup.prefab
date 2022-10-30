@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Steal The Cheese
   description: 
-  isOptional: 0
+  isOptional: 1
   delayVisible: 0.1
 --- !u!114 &3063094593970821171
 MonoBehaviour:
