@@ -17421,7 +17421,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lootPrefab
       value: 
-      objectReference: {fileID: 6947048205207790975, guid: 0a61941dab866dc479fcbf3464ef77ee,
+      objectReference: {fileID: 6947048205207790975, guid: 0c2218b844e5fe54b8a42c3ae8e957ab,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac70a7de74f39c44be729cb861f3eff, type: 3}
