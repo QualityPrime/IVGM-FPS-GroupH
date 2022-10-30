@@ -70,6 +70,7 @@ public class TriggerKey : MonoBehaviour
                 }
                 
                 aThing.transform.localPosition += Vector3.up * 4;
+                aSecondThing.transform.localPosition += Vector3.up * 4;
             }
         }
         
