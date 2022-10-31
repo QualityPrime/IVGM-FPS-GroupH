@@ -22,7 +22,7 @@ namespace FPS.Scripts
         public Rigidbody pickupRigidbody { get; private set; }
 
         Collider m_Collider;
-        Vector3 m_StartPosition;
+        public Vector3 m_StartPosition;
         bool m_HasPlayedFeedback;
 
         private void Start()

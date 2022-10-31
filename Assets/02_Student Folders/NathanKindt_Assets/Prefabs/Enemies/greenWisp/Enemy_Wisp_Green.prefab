@@ -202,8 +202,9 @@ MonoBehaviour:
   deathVFX: {fileID: 7655095426451682942, guid: 5ee130439d332294eb50179fa584c75a,
     type: 3}
   deathVFXSpawnPoint: {fileID: 381893446485871685}
-  lootPrefab: {fileID: 0}
-  dropRate: 1
+  lootPrefab: {fileID: 2620131183356007192, guid: 485d6efd1f58c7c41af14ed281459984,
+    type: 3}
+  dropRate: 0.33
   pathReachingRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   attackRangeColor: {r: 1, g: 0, b: 0, a: 1}
   detectionRangeColor: {r: 0, g: 0, b: 1, a: 1}
@@ -835,7 +836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8518786810994185309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.105, z: 0}
+  m_LocalPosition: {x: 0, y: 0.023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1351,6 +1352,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: bf8e4cb2f57f6634a82bf42a58f65874,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: bf8e4cb2f57f6634a82bf42a58f65874,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.028346404
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: bf8e4cb2f57f6634a82bf42a58f65874,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.8584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133532512903428781, guid: bf8e4cb2f57f6634a82bf42a58f65874,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.079325415
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf8e4cb2f57f6634a82bf42a58f65874, type: 3}

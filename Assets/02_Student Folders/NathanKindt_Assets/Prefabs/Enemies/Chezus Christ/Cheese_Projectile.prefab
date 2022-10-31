@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3659995153115176983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7340071910578679314}
@@ -60,10 +60,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de99b30e1e73fd14e98cc5371da25d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.1
+  radius: 0.2
   root: {fileID: 3659995153115176982}
   tip: {fileID: 7340071910578679314}
-  maxLifeTime: 20
+  maxLifeTime: 10
   impactVFX: {fileID: 7655095426451682942, guid: 74babe0fe8c445c4e985a4157f19099f,
     type: 3}
   impactVFXLifetime: 0.8
@@ -72,16 +72,16 @@ MonoBehaviour:
   hittableLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  speed: 20
+  speed: 15
   gravityDownAcceleration: 0
   trajectoryCorrectionDistance: 0
   inheritWeaponVelocity: 0
-  bobFrequency: 50
-  bobAmount: 30
+  bobFrequency: 0
+  bobAmount: 0
   doBobbing: 0
   doRotation: 0
-  rotationSpeed: 999
-  damage: 50
+  rotationSpeed: 0
+  damage: 25
   damageRange:
     min: 0
     max: 0
@@ -100,19 +100,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaOfEffectDistance: 7
+  areaOfEffectDistance: 4
   damageRatioOverDistance:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.052247994
+      outSlope: -0.052247994
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.17635895
     - serializedVersion: 3
       time: 1
       value: 0

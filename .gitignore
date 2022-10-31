@@ -129,3 +129,4 @@ $RECYCLE.BIN/
 #!/[Aa]ssets/**/*.meta
 # too Large
 **/LightingData.*
+WebGL Builds/
