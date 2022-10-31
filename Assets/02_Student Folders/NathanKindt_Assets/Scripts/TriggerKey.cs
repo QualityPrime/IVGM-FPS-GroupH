@@ -69,8 +69,8 @@ public class TriggerKey : MonoBehaviour
                     onPick.Invoke(pickingPlayer);
                 }
                 
-                aThing.transform.localPosition += Vector3.up * 4;
-                aSecondThing.transform.localPosition += Vector3.up * 4;
+                aThing.transform.localPosition += Vector3.up * 2.8f;
+                if (aSecondThing != null) aSecondThing.transform.localPosition += Vector3.up * 2.8f;
             }
         }
         
